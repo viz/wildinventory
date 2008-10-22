@@ -1,0 +1,22 @@
+<h1>Listing displays</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Quantity</th>
+  </tr>
+
+<% for display in @displays %>
+  <tr>
+    <td><%=h display.description %></td>
+    <td><%=h display.quantity %></td>
+    <td><%= link_to 'Show', display %></td>
+    <td><%= link_to 'Edit', edit_display_path(display) %></td>
+    <td><%= link_to 'Destroy', display, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New display', new_display_path %>
