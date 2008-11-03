@@ -8,8 +8,9 @@
 
 <% for display in @displays %>
   <tr>
-    <td><%=h display.description %></td>
-    <td><%=h display.quantity %></td>
+  <td><%=h display.name %></td>
+  <td><%=h display.description %></td>
+    <td><%=h display.quantity_available %></td>
     <td><%= link_to 'Show', display %></td>
     <td><%= link_to 'Edit', edit_display_path(display) %></td>
     <td><%= link_to 'Destroy', display, :confirm => 'Are you sure?', :method => :delete %></td>

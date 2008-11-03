@@ -4,12 +4,16 @@
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </p>
+  <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :quantity %><br />
-    <%= f.text_field :quantity %>
+    <%= f.label :quantity_available %><br />
+    <%= f.text_field :quantity_available %>
   </p>
   <p>
     <%= f.submit "Update" %>

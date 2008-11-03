@@ -12,8 +12,10 @@
 ActiveRecord::Schema.define(:version => 20081022231052) do
 
   create_table "displays", :force => true do |t|
+    t.text     "name"
     t.text     "description"
-    t.integer  "quantity"
+    t.integer  "quantity_in_stock",  :limit => 11, :default => 0
+    t.integer  "quantity_available", :limit => 11, :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
