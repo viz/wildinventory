@@ -45,3 +45,19 @@ Then /there should be (\d+) displays in store/ do |n|
   Display.find(:first).in_stock.should == n.to_i
 end
 
+#===================================================
+
+Given /I am not logged in/ do
+  #ensure there is no current user
+  visits "/sessions/destroy"
+end
+
+When /I view the home page/ do
+  visits "/bookings"
+end
+
+#===================================================
+
+Given /I am logged in as '(\w+)' / do |user|
+  
+end

@@ -25,11 +25,10 @@ Scenario: Ship display
 Scenario: View home page without logging in
 	Given I am not logged in
 	When I view the home page
-	Then I should see the generic home page
+	Then I should not see "My Bookings"
 	
 Scenario: View home page when logged in
-	Given I am logged in as office manager
+	Given I am logged in as 'office manager'
 	When I view the home page
 	Then I should see the customised home page
-	
 	
